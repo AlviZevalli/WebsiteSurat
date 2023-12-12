@@ -1,3 +1,11 @@
+<!-- list-surat.php -->
+<?php
+$filePath = 'C:\xampp\htdocs\WebsiteSurat\user\surat-data.json';
+
+// Mengambil data surat dari file JSON
+$letters = json_decode(file_get_contents($filePath), true) ?? [];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -193,6 +201,28 @@
             </div>
           </div>
         </div>
+        <div class="container mt-3">
+        <table class="table table-bordered table-striped">
+   <thead class="thead-dark">
+      <tr>
+         <th>Nama</th>
+         <th>NIM</th>
+         <th>Isi Surat</th>
+         <th>Status</th>
+      </tr>
+   </thead>
+   <tbody>
+      <?php foreach ($letters as $letter): ?>
+         <tr>
+            <td><?= $letter['nama']; ?></td>
+            <td><?= $letter['nim']; ?></td>
+            <td><?= $letter['pilihan']; ?></td>
+            <td><?= $letter['status']; ?></td>
+         </tr>
+      <?php endforeach; ?>
+   </tbody>
+</table>
+   </div>
       </div>
     </main>
     <script src="./js/bootstrap.bundle.min.js"></script>
