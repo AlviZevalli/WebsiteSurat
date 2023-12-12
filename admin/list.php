@@ -73,7 +73,7 @@ $letters = json_decode(file_get_contents($filePath), true) ?? [];
                   </td>
                   <td>
                      <!-- Tombol Menyetujui Surat -->
-                     <form action="AksiSurat.php" method="post" style="display:inline;">
+                     <form action="aksiSurat.php" method="post" style="display:inline;">
                         <input type="hidden" name="action" value="approve">
                         <input type="hidden" name="nama" value="<?= $letter['nama']; ?>">
                         <input type="hidden" name="nim" value="<?= $letter['nim']; ?>">
@@ -82,7 +82,7 @@ $letters = json_decode(file_get_contents($filePath), true) ?? [];
                      </form>
 
                      <!-- Tombol Menolak Surat -->
-                     <form action="AksiSurat.php" method="post" style="display:inline;">
+                     <form action="aksiSurat.php" method="post" style="display:inline;">
                         <input type="hidden" name="action" value="reject">
                         <input type="hidden" name="nama" value="<?= $letter['nama']; ?>">
                         <input type="hidden" name="nim" value="<?= $letter['nim']; ?>">

@@ -29,6 +29,7 @@ $newLetter = array(
     'Cuti' => $cuti, // Perhatikan perubahan di sini
     'ProgramStudi3' => $programstudi3, // Perhatikan perubahan di sini
     'Semester3' => $semester3, // Perhatikan perubahan di sini
+    'nomor'=>$nomor,
 );
 
 $letters = []; // Menyiapkan array untuk menyimpan surat
