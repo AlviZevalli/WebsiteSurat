@@ -5,11 +5,14 @@ $nama     = $_POST['name'];
 $nim      = $_POST['NIM'];
 $nomor    = $_POST['NoTelepon'];
 $pilihan  = $_POST['surat'];
+//Surat Berhenti Studi
 $semester = isset($_POST['Semester1']) ? $_POST['Semester1'] : '';
 $programstudi1 = isset($_POST['ProgramStudi1']) ? $_POST['ProgramStudi1']: '';
-$semester1 = isset($_POST['Semester2']) ? $_POST['Semester2'] : '';
+//Surat Cuti
+$semester2 = isset($_POST['Semester2']) ? $_POST['Semester2'] : '';
 $programstudi2 = isset($_POST['ProgramStudi2']) ? $_POST['ProgramStudi2']: '';
 $cuti = isset($_POST['Cuti']) ? $_POST['Cuti'] : '';
+//Surat Aktif Studi
 $programstudi3 = isset($_POST['ProgramStudi3']) ? $_POST['ProgramStudi3']: '';
 $semester3 = isset($_POST['Semester3']) ? $_POST['Semester3'] : '';
 
@@ -21,7 +24,7 @@ $newLetter = array(
     'status' => 'Menunggu',
     'Semester1'=> $semester,
     'ProgramStudi1' => $programstudi1, // Perhatikan perubahan di sini
-    'Semester2' => $semester1, // Perhatikan perubahan di sini
+    'Semester2' => $semester2, // Perhatikan perubahan di sini
     'ProgramStudi2' => $programstudi2, // Perhatikan perubahan di sini
     'Cuti' => $cuti, // Perhatikan perubahan di sini
     'ProgramStudi3' => $programstudi3, // Perhatikan perubahan di sini

@@ -183,6 +183,9 @@
         <label for="Semester2">Semester:</label>
         <input type="text" id="Semester2" name="Semester2">
 
+        <label for="ProgramStudi2">Program Studi:</label>
+        <input type="text" id="ProgramStudi2" name="ProgramStudi2">
+
         <label for="Cuti">Cuti Studi Yang Ke:</label>
         <input type="text" id="Cuti" name="Cuti">
       </div>

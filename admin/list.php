@@ -18,7 +18,7 @@ $letters = json_decode(file_get_contents($filePath), true) ?? [];
 
 <div class="container mt-5">
    <h2>List Daftar Surat</h2>
-
+   
    <table class="table table-bordered">
       <thead>
          <tr>
@@ -37,14 +37,17 @@ $letters = json_decode(file_get_contents($filePath), true) ?? [];
                <td><?= $letter['pilihan']; ?></td>
                <td><?= $letter['status']; ?></td>
                <td>
-                  <!-- Menampilkan tautan untuk melihat dokumen -->
-                  <a href="preview-document.php?document=<?= base64_encode($letter['dokumen']); ?>" target="_blank">Preview Dokumen</a>
+                  <!-- Form to submit data to SuratBerhenti.php -->
+                  <form action="GenerateSurat.php" method="post">
+                     <button type="submit" class="btn btn-success">Lihat</button>
+                  </form>
                </td>
             </tr>
          <?php endforeach; ?>
       </tbody>
    </table>
 </div>
+         </div>
 
 <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
